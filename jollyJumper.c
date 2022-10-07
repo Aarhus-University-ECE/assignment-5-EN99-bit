@@ -15,10 +15,10 @@ int isJollyJumber(const int seq[], int size) //Function that computes jolly jump
     {
         diffs_found[i] = false;
     }
-        
+    diffs_found[0] = true;
     for (int  i = 1; i<size; i++ )
     { 
-        int diff = abs(seq[i]-seq[i-1]); //function that prints the difference between the current value and the former value. 
+        int diff = abs(seq[i]-seq[i+1]); //function that prints the difference between the current value and the former value. 
         printf("%d", diff); 
         if (diff >= size || diff == 0) //if the difference between two values are bigger than the array itself, its not a jolly jumper
             return 0;

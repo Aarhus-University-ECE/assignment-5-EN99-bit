@@ -27,7 +27,13 @@ int main(void) {
 	/*readin n and check that is is OK*/
 
 	int *numbers = malloc(sizeof(int) * n); /*the numbers read*/
-
+	
+    scanf("%d",&n);
+	printf("Enter %d numbers to check for jolly jumper\n",n);
+	for (int i = 0; i<n; i++)
+	{
+		scanf("%d",&i);
+	}
 	/*readin the n numbers in the array numbers*/
 
 	if (isJollyJumber(numbers, n)) {
